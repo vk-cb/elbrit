@@ -10,6 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        textPrimary : "var(--textPrimary)",
+        featureBackground : "var(--featureBackground)",
+        footerCard : "var(--footerCard)",
+        heroBackground : "var(--heroBackground)",
+        lightText : "var(--lightText)",
       },
     },
   },
