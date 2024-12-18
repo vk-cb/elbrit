@@ -8,7 +8,7 @@ const IngredientCard = ({
 }) => {
   return (
     <div
-      className={`w-[380px] h-[250px] p-5 rounded-lg relative flex flex-col justify-between  bg-cover bg-no-repeat ${className}`}
+      className={`sm:w-[380px] w-[320px] h-[250px] p-5 rounded-lg relative flex flex-col justify-between  bg-cover bg-no-repeat ${className}`}
     >
       {/* Text Content */}
       <div>
