@@ -8,7 +8,7 @@ import FeatureSection from "./FeatureSection";
 
 const Hero = () => {
   return (
-    <section className="bg-heroBackground min-h-[90vh] mx-6 relative px-20 ">
+    <section className="bg-heroBackground min-h-[90vh] mx-6 relative px-20 mb-[300px]">
       <div className="container mx-auto ">
         <h1 className="text-9xl font-bold text-center text-textPrimary py-8">
           Essential Vitamins
