@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlogCard = ({ title, date, index  }) => {
+const BlogCard = ({ title, date1,date2, index  }) => {
   return (
     <div >
       <div className="relative">
@@ -13,9 +13,10 @@ const BlogCard = ({ title, date, index  }) => {
             The Covid-19 Epidemic In 2022 Is Back
           </p>
         </div>
+        {date1 &&
         <div className="bg-textPrimary w-28 rounded-r-full py-1 justify-center flex items-center absolute top-4 -left-2">
-          <p className="text-white font-medium">20 APR</p>
-        </div>
+          <p className="text-white font-medium">{date1}</p>
+        </div>}
       </div>
 
       <div className="relative">
@@ -30,9 +31,10 @@ const BlogCard = ({ title, date, index  }) => {
             The Covid-19 Epidemic In 2023 Is Back
           </p>
         </div>
+        {date2 && 
         <div className="absolute top-4 -left-2 bg-textPrimary w-28 rounded-r-full py-1 justify-center flex items-center">
-          <p className="text-white font-medium">20 APR</p>
-        </div>
+          <p className="text-white font-medium">{date2}</p>
+        </div>}
         </div>
     </div>
   );

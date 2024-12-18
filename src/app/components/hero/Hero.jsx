@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Button from "../ui/Button";
 import HeroFeature from "../ui/heroFeature";
-import { LuPill } from "react-icons/lu";
-import { LiaWeightSolid } from "react-icons/lia";
-import { GiFruitBowl } from "react-icons/gi";
 import FeatureSection from "./FeatureSection";
+import { heroText } from "@/app/utility/constants";
 
 const Hero = () => {
   return (
-    <section className="bg-heroBackground min-h-[90vh] mx-6 relative px-20 mb-[300px]">
+    <section className="bg-heroBackground min-h-[100vh] mx-6 relative px-20 mb-[300px]">
       <div className="container mx-auto ">
         <h1 className="text-9xl font-bold text-center text-textPrimary py-8">
           Essential Vitamins
@@ -25,28 +23,19 @@ const Hero = () => {
             <Button text="Explore" className="uppercase px-8" />
           </div>
           <div className="flex flex-col justify-end gap-4 bottom-0 w-[400px]">
+            {
+              heroText.map((d,i)=>(
             <HeroFeature
-              heading="Vitamins"
-              description1="Increased Vitamins and"
-              description2="minerals in your diet"
+            key={i+"heroText"}
+              heading={d.heading}
+              description1={d.description1}
+              description2={d.description2}
             >
-              <LuPill />
+              {d.icon}
             </HeroFeature>
-            <HeroFeature
-              heading="Weight Loss"
-              description1="Weight Loss "
-              description2="Find scientifically proven solutions
-"
-            >
-              <LiaWeightSolid />
-            </HeroFeature>
-            <HeroFeature
-              heading="Functional Foods"
-              description1="Functional Foods"
-              description2="From protein powers to baby formula"
-            >
-              <GiFruitBowl />
-            </HeroFeature>
+            ))
+          }
+           
           </div>
         </div>
 
